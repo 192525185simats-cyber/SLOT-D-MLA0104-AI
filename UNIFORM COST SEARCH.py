@@ -1,0 +1,39 @@
+Python 3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)] on win32
+Enter "help" below or click "Help" above for more information.
+>>> import heapq
+... 
+... graph = {}
+... 
+... n = int(input("Enter number of vertices: "))
+... 
+... for i in range(n):
+...     vertex = input("Enter vertex: ")
+...     m = int(input("Enter number of neighbours: "))
+... 
+...     neighbours = []
+... 
+...     for j in range(m):
+...         node = input("Neighbour: ")
+...         cost = int(input("Cost: "))
+...         neighbours.append((node, cost))
+... 
+...     graph[vertex] = neighbours
+... 
+... start = input("Enter start node: ")
+... goal = input("Enter goal node: ")
+... 
+... queue = [(0, start)]
+... visited = []
+... 
+... while queue:
+...     cost, node = heapq.heappop(queue)
+... 
+...     if node not in visited:
+...         visited.append(node)
+... 
+...         if node == goal:
+...             print("Goal Found:", node)
+...             print("Minimum Cost:", cost)
+...             break
+... 
+...         for neighbour, weight in graph[node]:
