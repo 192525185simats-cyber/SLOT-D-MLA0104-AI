@@ -62,6 +62,7 @@ Print "DFS Traversal"
 Call DFS(starting vertex)
 
 STOP
+
 ##Uniform Cost Search (UCS) – Pseudocode
 START
 
