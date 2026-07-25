@@ -101,3 +101,19 @@ END WHILE
 Print "Goal Not Found"
 
 STOP
+
+##A* Bearch
+
+START
+
+1. Create a priority queue.
+2. Insert the start node with f = g + h.
+3. Repeat until the queue is empty:
+   a. Remove the node with the smallest f value.
+   b. If it is the goal, print the path and cost.
+   c. Mark the node as visited.
+   d. Calculate g, h, and f for each neighbour.
+   e. Insert neighbours into the priority queue.
+4. If the goal is not found, print "Goal Not Found".
+
+STOP
