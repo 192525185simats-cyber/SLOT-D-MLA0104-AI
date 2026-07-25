@@ -138,3 +138,27 @@ WHILE queue is not empty
 END WHILE
 
 STOP
+
+##Water jug problem
+
+START
+
+Read jug1, jug2 and target
+Create a queue with initial state (0,0)
+
+WHILE queue is not empty
+    Remove a state
+    IF target is found
+        Print "Target Achieved"
+        STOP
+    Generate all possible next states:
+        Fill Jug1
+        Fill Jug2
+        Empty Jug1
+        Empty Jug2
+        Pour Jug1 to Jug2
+        Pour Jug2 to Jug1
+    Add unvisited states to queue
+END WHILE
+
+STOP
