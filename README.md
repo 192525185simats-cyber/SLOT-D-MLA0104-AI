@@ -62,3 +62,41 @@ Print "DFS Traversal"
 Call DFS(starting vertex)
 
 STOP
+##Uniform Cost Search (UCS) – Pseudocode
+START
+
+Read the graph
+Read the start node
+Read the goal node
+
+Create a priority queue
+Insert (0, start node) into the priority queue
+
+Create an empty visited list
+
+WHILE priority queue is not empty
+
+    Remove the node with the minimum cost
+
+    IF node is not visited THEN
+
+        Mark the node as visited
+
+        IF node is the goal node THEN
+            Print "Goal Found"
+            Print total cost
+            STOP
+        END IF
+
+        FOR each neighbour of the current node
+            Calculate new cost = current cost + edge cost
+            Insert (new cost, neighbour) into the priority queue
+        END FOR
+
+    END IF
+
+END WHILE
+
+Print "Goal Not Found"
+
+STOP
