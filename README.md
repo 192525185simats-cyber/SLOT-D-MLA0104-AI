@@ -117,3 +117,24 @@ START
 4. If the goal is not found, print "Goal Not Found".
 
 STOP
+
+##GBFS
+
+START
+
+Read graph and heuristic values
+Read start node and goal node
+
+Create a priority queue
+Insert start node
+
+WHILE queue is not empty
+    Remove node with smallest heuristic value
+    Visit the node
+    IF node is goal
+        Print "Goal Found"
+        STOP
+    Add all unvisited neighbours to the priority queue
+END WHILE
+
+STOP
