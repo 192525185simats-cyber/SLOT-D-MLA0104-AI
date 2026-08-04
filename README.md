@@ -162,3 +162,26 @@ WHILE queue is not empty
 END WHILE
 
 STOP
+Sum in Prolog:
+pseudo code:
+Algorithm: Sum of First N Natural Numbers (Using Recursion)
+
+START
+
+Function SUM(N)
+
+    If N = 0 Then
+        Return 0
+    Else
+        S1 ← SUM(N - 1)
+        S ← S1 + N
+        Return S
+    End If
+
+END Function
+
+Read N
+Result ← SUM(N)
+Print Result
+
+STOP
